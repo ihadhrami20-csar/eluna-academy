@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer id="contact" className="bg-deep-ocean-blue text-white py-12">
       <div className="container mx-auto text-center">
-        <h3 className="text-2xl font-bold">Al-Qalam Tuition</h3>
+        <h3 className="text-2xl font-bold">Elena Academy</h3>
         <div className="flex justify-center space-x-6 mt-4">
           <a href="#home" className="hover:text-soft-gold">Home</a>
           <a href="#courses" className="hover:text-soft-gold">Courses</a>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <a href="#" className="hover:text-soft-gold">📘</a>
           <a href="#" className="hover:text-soft-gold">📸</a>
         </div>
-        <p className="mt-8 text-sm text-gray-400">&copy; 2025 Al-Qalam Tuition. All rights reserved.</p>
+        <p className="mt-8 text-sm text-gray-400">&copy; 2025 Elena Academy. All rights reserved.</p>
       </div>
     </footer>
   );

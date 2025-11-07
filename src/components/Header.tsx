@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-ocean-blue shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-white">Al-Qalam Tuition</a>
+        <a href="#" className="text-2xl font-bold text-white">Elena Academy</a>
         <nav className="hidden lg:flex items-center space-x-8">
           <NavLink href="#">Home</NavLink>
           <NavLink href="#">Courses</NavLink>
