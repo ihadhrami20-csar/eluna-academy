@@ -1,4 +1,4 @@
-# Al-Qalam Tuition - Modern Online Learning Platform
+# Eluna Academy - Modern Online Learning Platform
 
 A professional, responsive education landing page built with React, TypeScript, and Tailwind CSS. Designed specifically for Islamic/Quranic education services with a beautiful ocean blue and turquoise color scheme.
 
