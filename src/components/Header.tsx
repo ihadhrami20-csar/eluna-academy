@@ -23,7 +23,10 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-ocean-blue shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" onClick={(e) => { e.preventDefault(); window.location.reload(); }} className="text-2xl font-bold text-white cursor-pointer hover:opacity-80 transition-opacity">Eluna Academy</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); window.location.reload(); }} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+          <img src="/eluna-logo.jpg" alt="Eluna Academy Logo" className="h-12 w-auto object-contain" />
+          <span className="text-2xl font-bold text-white hidden sm:inline">Eluna Academy</span>
+        </a>
         <nav className="hidden lg:flex items-center space-x-8">
           <NavLink href="#home">Home</NavLink>
           <NavLink href="#courses">Courses</NavLink>
@@ -35,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
             onClick={onSignUpClick}
             className="bg-gradient-button text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
           >
-            Join Now
+            Daftar Sekarang
           </button>
         </div>
         <div className="lg:hidden">
@@ -57,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
               onClick={onSignUpClick}
               className="bg-gradient-button text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-4"
             >
-              Join Now
+              Daftar Sekarang
             </button>
           </nav>
         </div>

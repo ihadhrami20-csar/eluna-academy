@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs.ts';
 
 interface SignUpModalProps {
   onClose: () => void;
 }
 
 const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
 
@@ -31,12 +33,22 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call (in production, you'd send this to your backend)
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        {
+          to_email: formData.email,
+          name: formData.name,
+          title: 'Eluna Academy Application',
+          email: formData.email,
+          phone: formData.phone,
+        }
+      );
       
       // Success
       setSuccessMessage('Welcome! Check your email for next steps.');
-      setFormData({ name: '', email: '' });
+      setFormData({ name: '', email: '', phone: '' });
       
       setTimeout(() => {
         onClose();

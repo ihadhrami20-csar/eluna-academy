@@ -21,20 +21,20 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
                 onClick={onJoinClick}
                 className="bg-gradient-button text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
-                Join Us Now
+                Ikuti Kelas Sekarang
               </button>
               <button className="bg-transparent border-2 border-turquoise text-turquoise font-semibold py-3 px-8 rounded-lg hover:bg-turquoise hover:text-white transition-all duration-300" onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}>
-                View Courses
+                Lihat Kursus
               </button>
             </div>
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8 text-gray-300">
               <div className="flex items-center gap-3">
                 <UserIcon className="w-8 h-8 text-sky-blue" />
-                <span>Over 10,000 students</span>
+                <span>Lebih dari 50 Pelajar</span>
               </div>
               <div className="flex items-center gap-3">
                 <BookOpenIcon className="w-8 h-8 text-sky-blue" />
-                <span>More than 50 courses</span>
+                <span>3 Kursus Islamik Teras di Eluna Academy</span>
               </div>
             </div>
           </div>
@@ -43,30 +43,30 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
                 <div className="relative w-full h-full max-w-lg">
                     {/* Floating Cards */}
                     <div className="absolute top-0 right-0 sm:right-10 w-48 sm:w-64 bg-white/10 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float-slow">
-                        <img src="https://picsum.photos/seed/tutor1/200/200" alt="Tutor" className="w-full h-auto rounded-lg"/>
+                        <img src="/quran-image.jpg" alt="Islamic Elements with Quran" className="w-full h-auto rounded-lg object-cover"/>
                         <div className="absolute -bottom-4 -left-4 bg-white/20 backdrop-blur-lg p-2 rounded-lg flex items-center gap-2">
                             <img src="https://picsum.photos/seed/student1/40/40" alt="Student" className="w-10 h-10 rounded-full border-2 border-sky-blue"/>
                             <div>
-                                <p className="text-white text-sm font-bold">Ali Hassan</p>
+                                <p className="text-white text-sm font-bold">Zakiyyah Room</p>
                                 <p className="text-gray-300 text-xs">Quran Tutor</p>
                             </div>
                         </div>
                     </div>
                     
                     <div className="absolute bottom-10 left-0 sm:left-5 w-52 sm:w-72 bg-white/10 backdrop-blur-md p-3 rounded-xl shadow-2xl animate-float-fast">
-                        <img src="https://picsum.photos/seed/tutor2/300/200" alt="Tutor" className="w-full h-auto rounded-lg"/>
-                         <div className="absolute -top-5 right-0 bg-white/20 backdrop-blur-lg p-3 rounded-lg flex items-center gap-2">
+                        <img src="/books-image.jpg" alt="Books and Learning" className="w-full h-auto rounded-lg object-cover"/>
+                         <div className="absolute top-1/4 -right-20 bg-white/20 backdrop-blur-lg p-3 rounded-lg flex items-center gap-2">
                              <AcademicCapIcon className="w-8 h-8 text-soft-gold" />
                              <div>
-                                <p className="text-white text-sm font-bold">Congrats!</p>
-                                <p className="text-gray-300 text-xs">Course Completed</p>
+                                <p className="text-white text-sm font-bold">Tahniah!</p>
+                                <p className="text-gray-300 text-xs">Bacaan Al-Quran Anda Semakin Baik</p>
                              </div>
                          </div>
                     </div>
                     
-                    <div className="absolute top-1/2 -translate-y-1/2 -left-10 sm:-left-16 w-36 bg-white/20 backdrop-blur-lg p-3 rounded-xl shadow-2xl animate-float-medium flex flex-col items-center">
-                        <p className="text-3xl font-bold text-soft-gold">100+</p>
-                        <p className="text-sm text-white">Expert Tutors</p>
+                    <div className="absolute top-2/3 -translate-y-1/2 -left-10 sm:-left-16 w-36 bg-white/20 backdrop-blur-lg p-3 rounded-xl shadow-2xl animate-float-medium flex flex-col items-center justify-center">
+                        <p className="text-4xl font-extrabold text-soft-gold mb-1">100%</p>
+                        <p className="text-sm text-white text-center font-semibold">Tutor Berkualiti</p>
                     </div>
                 </div>
             </div>

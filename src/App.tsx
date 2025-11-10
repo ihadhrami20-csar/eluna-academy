@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import Header from './components/Header.tsx';
 import Hero from './components/Hero.tsx';
 import Partners from './components/Partners.tsx';
@@ -7,8 +8,13 @@ import PopularCourses from './components/PopularCourses.tsx';
 import About from './components/About.tsx';
 import Footer from './components/Footer.tsx';
 import SignUpModal from './components/SignUpModal.tsx';
+import { EMAILJS_CONFIG } from './config/emailjs.ts';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize EmailJS
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+  }, []);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
