@@ -23,20 +23,19 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-ocean-blue shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-white">Elena Academy</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); window.location.reload(); }} className="text-2xl font-bold text-white cursor-pointer hover:opacity-80 transition-opacity">Eluna Academy</a>
         <nav className="hidden lg:flex items-center space-x-8">
-          <NavLink href="#">Home</NavLink>
-          <NavLink href="#">Courses</NavLink>
-          <NavLink href="#">Blog</NavLink>
-          <NavLink href="#">About</NavLink>
-          <NavLink href="#">Contact</NavLink>
+          <NavLink href="#home">Home</NavLink>
+          <NavLink href="#courses">Courses</NavLink>
+          <NavLink href="#about">About</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
         </nav>
         <div className="hidden lg:block">
           <button
             onClick={onSignUpClick}
             className="bg-gradient-button text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
           >
-            Sign Up
+            Join Now
           </button>
         </div>
         <div className="lg:hidden">
@@ -50,16 +49,15 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
       {isMenuOpen && (
         <div className="lg:hidden bg-ocean-blue/95 backdrop-blur-sm px-6 pb-4">
           <nav className="flex flex-col space-y-4 text-center">
-            <NavLink href="#">Home</NavLink>
-            <NavLink href="#">Courses</NavLink>
-            <NavLink href="#">Blog</NavLink>
-            <NavLink href="#">About</NavLink>
-            <NavLink href="#">Contact</NavLink>
+            <NavLink href="#home">Home</NavLink>
+            <NavLink href="#courses">Courses</NavLink>
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
             <button
               onClick={onSignUpClick}
               className="bg-gradient-button text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-4"
             >
-              Sign Up
+              Join Now
             </button>
           </nav>
         </div>

@@ -92,7 +92,7 @@ const PopularCourses: React.FC = () => {
         : courses.filter(course => course.category === activeFilter);
 
     return (
-        <section className="py-20 bg-gray-50">
+        <section id="courses" className="py-20 bg-gray-50">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Our Most Popular Programs</h2>

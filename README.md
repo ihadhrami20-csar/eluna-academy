@@ -1,4 +1,5 @@
-# Al-Qalam Tuition - Modern Online Learning Platform
+
+# Eluna Academy - Modern Online Learning Platform
 
 A professional, responsive education landing page built with React, TypeScript, and Tailwind CSS. Designed specifically for Islamic/Quranic education services with a beautiful ocean blue and turquoise color scheme.
 
@@ -31,8 +32,8 @@ A professional, responsive education landing page built with React, TypeScript, 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/al-qalam-tuition.git
-cd al-qalam-tuition
+git clone https://github.com/yourusername/eluna-academy.git
+cd eluna-academy
 ```
 
 2. Install dependencies:
@@ -122,7 +123,7 @@ Launches the test runner in interactive watch mode.
 
 1. Update `package.json`:
 ```json
-"homepage": "https://yourusername.github.io/al-qalam-tuition"
+"homepage": "https://yourusername.github.io/eluna-academy"
 ```
 
 2. Install gh-pages:

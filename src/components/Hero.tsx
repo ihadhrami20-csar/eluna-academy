@@ -4,31 +4,26 @@ import { UserIcon, BookOpenIcon, AcademicCapIcon } from './icons/HeroIcons.tsx';
 interface HeroProps {
   onJoinClick: () => void;
 }
-
 const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
   return (
-    <section className="relative bg-ocean-blue text-white pt-32 pb-20 md:pb-32 overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
+<section id="home" className="relative bg-ocean-blue text-white pt-32 pb-20 md:pb-32 overflow-hidden">      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-              Master Arabic & Quranic Studies With <span className="text-turquoise relative inline-block">Top Tutors
-                <svg className="absolute -bottom-1 left-0 w-full h-2" viewBox="0 0 100 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              Selamat Datang ke Eluna Academy
+              <svg className="absolute -bottom-1 left-0 w-full h-2" viewBox="0 0 100 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 6.5C21.5 2.5 78.5 2 99 6.5" stroke="#4FB4C6" strokeWidth="3" strokeLinecap="round"/>
                 </svg>
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">
-              Interactive Quran and Arabic lessons guided by qualified teachers — anytime, anywhere.
-            </p>
+              </h1>
+            <p className="text-2xl md:text-3xl font-semibold text-turquoise mb-6">Mengenal Huruf, Fahami Hikmah</p>
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
               <button
                 onClick={onJoinClick}
                 className="bg-gradient-button text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
-                Join For Free
+                Join Us Now
               </button>
-              <button className="bg-transparent border-2 border-turquoise text-turquoise font-semibold py-3 px-8 rounded-lg hover:bg-turquoise hover:text-white transition-all duration-300">
+              <button className="bg-transparent border-2 border-turquoise text-turquoise font-semibold py-3 px-8 rounded-lg hover:bg-turquoise hover:text-white transition-all duration-300" onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}>
                 View Courses
               </button>
             </div>

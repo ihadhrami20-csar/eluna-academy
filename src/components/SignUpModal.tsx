@@ -58,8 +58,8 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-        <h2 className="text-2xl font-bold text-ocean-blue text-center mb-2">Join Our Community</h2>
-        <p className="text-center text-gray-500 mb-6">Start your learning journey for free today!</p>
+        <h2 className="text-2xl font-bold text-ocean-blue text-center mb-2">Daftar Kelas Bersama Kami</h2>
+        <p className="text-center text-gray-500 mb-6">Mulakan Perjalanan Ilmu Anda Bersama Kami!</p>
         
         {successMessage ? (
           <div className="text-center py-8">
@@ -71,11 +71,11 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
         ) : (
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nama Penuh</label>
               <input 
                 type="text" 
                 id="name" 
-                placeholder="Enter your name" 
+                placeholder="Masukkan nama penuh anda" 
                 value={formData.name}
                 onChange={handleChange}
                 disabled={isSubmitting}
@@ -83,12 +83,24 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Alamat Emel</label>
               <input 
                 type="email" 
                 id="email" 
-                placeholder="Enter your email" 
+                placeholder="Masukkan emel anda" 
                 value={formData.email}
+                onChange={handleChange}
+                disabled={isSubmitting}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-blue focus:border-sky-blue transition disabled:bg-gray-100 disabled:cursor-not-allowed" 
+              />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="Nombor Telefon" className="block text-sm font-medium text-gray-700 mb-1">Nombor Telefon</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                placeholder="Masukkan nombor telefon anda" 
+                value={formData.phone}
                 onChange={handleChange}
                 disabled={isSubmitting}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-blue focus:border-sky-blue transition disabled:bg-gray-100 disabled:cursor-not-allowed" 
@@ -99,7 +111,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
               disabled={isSubmitting}
               className="w-full bg-gradient-button text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Creating Account...' : 'Create Account'}
+              {isSubmitting ? 'Creating Account...' : 'Hantar'}
             </button>
           </form>
         )}
