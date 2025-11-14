@@ -24,9 +24,9 @@ const App: React.FC = () => {
       <Header onSignUpClick={openModal} />
       <main>
         <Hero onJoinClick={openModal} />
-        <Partners />
-        <Categories />
         <About />
+        <Categories />
+        <Partners />
       </main>
       <Footer />
       {isModalOpen && <SignUpModal onClose={closeModal} />}

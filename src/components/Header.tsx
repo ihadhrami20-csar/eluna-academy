@@ -29,8 +29,8 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
         </button>
         <nav className="hidden lg:flex items-center space-x-8">
           <NavLink href="#home">Home</NavLink>
-          <NavLink href="#categories">Courses</NavLink>
           <NavLink href="#about">About</NavLink>
+          <NavLink href="#categories">Courses</NavLink>
           <NavLink href="#contact">Contact</NavLink>
         </nav>
         <div className="hidden lg:block">

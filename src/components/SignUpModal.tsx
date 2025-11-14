@@ -7,11 +7,11 @@ interface SignUpModalProps {
 }
 
 const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', courseType: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({ ...prev, [id]: value }));
   };
@@ -20,7 +20,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
     e.preventDefault();
     
     // Validation
-    if (!formData.name.trim() || !formData.email.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.courseType) {
       alert('Please fill in all fields');
       return;
     }
@@ -43,6 +43,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
           title: 'Eluna Academy Application',
           email: formData.email,
           phone: formData.phone,
+          courseType: formData.courseType,
         }
       );
 
@@ -53,6 +54,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
+          courseType: formData.courseType,
         }),
       });
 
@@ -64,7 +66,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
       
       // Success
       setSuccessMessage('Welcome! Check your email for next steps.');
-      setFormData({ name: '', email: '', phone: '' });
+      setFormData({ name: '', email: '', phone: '', courseType: '' });
       
       setTimeout(() => {
         onClose();
@@ -124,7 +126,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
               />
             </div>
             <div className="mb-6">
-              <label htmlFor="Nombor Telefon" className="block text-sm font-medium text-gray-700 mb-1">Nombor Telefon</label>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Nombor Telefon</label>
               <input 
                 type="tel" 
                 id="phone" 
@@ -134,6 +136,21 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
                 disabled={isSubmitting}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-blue focus:border-sky-blue transition disabled:bg-gray-100 disabled:cursor-not-allowed" 
               />
+            </div>
+            <div className="mb-6">
+              <label htmlFor="courseType" className="block text-sm font-medium text-gray-700 mb-1">Jenis Kursus yang Dipilih</label>
+              <select 
+                id="courseType" 
+                value={formData.courseType}
+                onChange={handleChange}
+                disabled={isSubmitting}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-blue focus:border-sky-blue transition disabled:bg-gray-100 disabled:cursor-not-allowed"
+              >
+                <option value="">-- Pilih Kursus --</option>
+                <option value="Try Ngaji">Try Ngaji - Kelas Mengaji Al-Quran</option>
+                <option value="Try Hafazan">Try Hafazan - Kelas Hafazan dan Tasmik</option>
+                <option value="Try UPKK">Try UPKK - Tuisyen Ulangkaji Bahasa Arab</option>
+              </select>
             </div>
             <button 
               type="submit" 

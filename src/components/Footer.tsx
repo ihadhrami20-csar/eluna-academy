@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
         <h3 className="text-2xl font-bold">Eluna Academy</h3>
         <div className="flex justify-center space-x-6 mt-4">
           <a href="#home" className="hover:text-soft-gold">Home</a>
-          <a href="#courses" className="hover:text-soft-gold">Courses</a>
           <a href="#about" className="hover:text-soft-gold">About</a>
+          <a href="#categories" className="hover:text-soft-gold">Courses</a>
           <a href="#contact" className="hover:text-soft-gold">Contact</a>
         </div>
         <div className="mt-4">
