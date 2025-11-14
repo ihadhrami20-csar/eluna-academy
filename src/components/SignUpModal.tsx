@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '../config/emailjs.ts';
+import { EMAILJS_CONFIG, GOOGLE_APPS_SCRIPT_CONFIG } from '../config/emailjs.ts';
 
 interface SignUpModalProps {
   onClose: () => void;
@@ -45,6 +45,22 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
           phone: formData.phone,
         }
       );
+
+      // Send data to Google Sheets
+      const response = await fetch(GOOGLE_APPS_SCRIPT_CONFIG.DEPLOYMENT_URL, {
+        method: 'POST',
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+        }),
+      });
+
+      if (!response.ok) {
+        console.error('Google Sheets error:', response.statusText);
+        // Don't fail the entire process if Google Sheets has an issue
+        // Email was already sent successfully
+      }
       
       // Success
       setSuccessMessage('Welcome! Check your email for next steps.');
@@ -55,6 +71,7 @@ const SignUpModal: React.FC<SignUpModalProps> = ({ onClose }) => {
         setSuccessMessage('');
       }, 2000);
     } catch (error) {
+      console.error('Form submission error:', error);
       alert('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);

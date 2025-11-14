@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
               >
                 Ikuti Kelas Sekarang
               </button>
-              <button className="bg-transparent border-2 border-turquoise text-turquoise font-semibold py-3 px-8 rounded-lg hover:bg-turquoise hover:text-white transition-all duration-300" onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}>
+              <button className="bg-transparent border-2 border-turquoise text-turquoise font-semibold py-3 px-8 rounded-lg hover:bg-turquoise hover:text-white transition-all duration-300" onClick={() => document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })}>
                 Lihat Kursus
               </button>
             </div>

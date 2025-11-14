@@ -8,7 +8,7 @@ const About: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-ocean-blue mb-8 text-center">Siapa Eluna Academy?</h2>
           
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            Eluna Academy ialah sebuah platform pembelajaran Islam moden yang menawarkan pelbagai program secara online dan fizikal, berfokus kepada pengajian Al-Quran, Hafazan, dan Bahasa Arab.
+            Eluna Academy ialah sebuah platform pembelajaran Islam moden yang menawarkan pelbagai program secara online dan fizikal, berfokus kepada pengajian <strong>Al-Quran, Hafazan, dan Bahasa Arab</strong>.
           </p>
 
           <p className="text-lg text-gray-700 mb-12 leading-relaxed">

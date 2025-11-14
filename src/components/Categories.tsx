@@ -1,14 +1,11 @@
 import React from 'react';
 import type { Category } from '../types';
-import { QuranRecitationIcon, ArabicLanguageIcon, TajweedIcon, IslamicStudiesIcon, KidsQuranIcon, AdultArabicIcon } from './icons/CategoryIcons.tsx';
+import { QuranRecitationIcon, ArabicLanguageIcon, TajweedIcon } from './icons/CategoryIcons.tsx';
 
 const categories: Category[] = [
-  { icon: QuranRecitationIcon, title: 'Quranic Recitation', courseCount: 8 },
-  { icon: ArabicLanguageIcon, title: 'Arabic Language', courseCount: 12 },
-  { icon: TajweedIcon, title: 'Tajweed', courseCount: 5 },
-  { icon: IslamicStudiesIcon, title: 'Islamic Studies', courseCount: 7 },
-  { icon: KidsQuranIcon, title: 'Kids’ Quran Class', courseCount: 4 },
-  { icon: AdultArabicIcon, title: 'Adult Arabic Class', courseCount: 6 },
+  { icon: QuranRecitationIcon, title: 'Try Ngaji', courseCount: 8 },
+  { icon: TajweedIcon, title: 'Try Hafazan', courseCount: 12 },
+  { icon: ArabicLanguageIcon, title: 'Try UPKK', courseCount: 5 },
 ];
 
 const CategoryCard: React.FC<{ category: Category }> = ({ category }) => (
@@ -23,13 +20,13 @@ const CategoryCard: React.FC<{ category: Category }> = ({ category }) => (
 
 const Categories: React.FC = () => {
   return (
-    <section className="py-20 bg-white">
+    <section id="categories" className="py-20 bg-white">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-charcoal mb-4">Top Categories</h2>
         <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
           Explore our wide range of courses designed for all ages and levels. Find the perfect path to deepen your knowledge.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {categories.map((category, index) => (
             <CategoryCard key={index} category={category} />
           ))}

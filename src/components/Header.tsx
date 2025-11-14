@@ -23,13 +23,13 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-ocean-blue shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" onClick={(e) => { e.preventDefault(); window.location.reload(); }} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+        <button onClick={() => window.location.reload()} className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity bg-none border-none p-0">
           <img src="/eluna-logo.jpg" alt="Eluna Academy Logo" className="h-12 w-auto object-contain" />
           <span className="text-2xl font-bold text-white hidden sm:inline">Eluna Academy</span>
-        </a>
+        </button>
         <nav className="hidden lg:flex items-center space-x-8">
           <NavLink href="#home">Home</NavLink>
-          <NavLink href="#courses">Courses</NavLink>
+          <NavLink href="#categories">Courses</NavLink>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#contact">Contact</NavLink>
         </nav>
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
         <div className="lg:hidden bg-ocean-blue/95 backdrop-blur-sm px-6 pb-4">
           <nav className="flex flex-col space-y-4 text-center">
             <NavLink href="#home">Home</NavLink>
-            <NavLink href="#courses">Courses</NavLink>
+            <NavLink href="#categories">Courses</NavLink>
             <NavLink href="#about">About</NavLink>
             <NavLink href="#contact">Contact</NavLink>
             <button
