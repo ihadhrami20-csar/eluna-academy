@@ -7,7 +7,7 @@ export const EMAILJS_CONFIG = {
 
 // Google Apps Script Configuration
 export const GOOGLE_APPS_SCRIPT_CONFIG = {
-  DEPLOYMENT_URL: 'https://script.google.com/macros/s/AKfycbyjWj1FR5PIFNTcjb1QGDytoA3XNn9jCBSnK4lKIG2MTWSvhYQWHtYwODKV65NJUjDTVw/exec',
+  DEPLOYMENT_URL: 'https://script.google.com/macros/s/AKfycbx3sYwkkEqxWJU_ssgP8LtZ0YPj41aKaPBFbJaRPWAZszuF7X3_GQISzNhdIixUOQzi/exec',
 };
 
 // Email template variables that will be sent to EmailJS
