@@ -4,7 +4,7 @@ import React from 'react';
 export interface Category {
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
   title: string;
-  courseCount: number;
+  courseCount?: number;
 }
 
 export interface Course {

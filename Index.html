@@ -1,14 +1,67 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elena Academy</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- SEO Meta Tags -->
+    <title>Eluna Academy - Islamic Learning Platform | Online & Physical Classes</title>
+    <meta name="description" content="Eluna Academy offers comprehensive Islamic education programs including Quranic studies (Try Ngaji), Memorization (Try Hafazan), and Arabic language courses (Try UPKK). Learn online or in-person with experienced instructors." />
+    <meta name="keywords" content="Islamic education, Quranic studies, Hafazan, Arabic language, online classes, religious education, Malaysia" />
+    <meta name="author" content="Eluna Academy" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <link rel="canonical" href="https://elunaacademy.com/" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Eluna Academy - Islamic Learning Platform | Online & Physical Classes" />
+    <meta property="og:description" content="Eluna Academy offers comprehensive Islamic education programs including Quranic studies (Try Ngaji), Memorization (Try Hafazan), and Arabic language courses (Try UPKK). Learn online or in-person." />
+    <meta property="og:url" content="https://elunaacademy.com/" />
+    <meta property="og:image" content="https://elunaacademy.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Eluna Academy - Islamic Learning Platform" />
+    <meta property="og:locale" content="ms_MY" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eluna Academy - Islamic Learning Platform" />
+    <meta name="twitter:description" content="Comprehensive Islamic education programs: Quranic studies, Hafazan, and Arabic language courses." />
+    <meta name="twitter:image" content="https://elunaacademy.com/og-image.jpg" />
+    <meta name="twitter:creator" content="@elunaacademy" />
+    
+    <!-- Additional SEO Tags -->
+    <meta name="theme-color" content="#0A2540" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Eluna Academy" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon.ico" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="style" href="/src/index.css" />
+    <link rel="preload" as="image" href="/try-ngaji.png" imagesrcset="/try-ngaji.png" />
+    <link rel="preload" as="image" href="/try-hafazan.png" imagesrcset="/try-hafazan.png" />
+    <link rel="preload" as="image" href="/try-upkk.png" imagesrcset="/try-upkk.png" />
+    
+    <!-- Tailwind CSS via CDN with fallback -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <noscript>
+      <link rel="stylesheet" href="/fallback.css" />
+    </noscript>
+    
+    <!-- Tailwind Configuration -->
     <script>
       tailwind.config = {
         theme: {
@@ -30,18 +83,37 @@
         }
       }
     </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
-  }
-}
-</script>
-</head>
+    
+    <!-- React Import Map -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19",
+        "react-dom": "https://esm.sh/react-dom@19"
+      }
+    }
+    </script>
+  </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <!-- Fallback content for non-JS rendering -->
+    <div id="root">
+      <noscript>
+        <div style="font-family: 'Manrope', sans-serif; padding: 20px; text-align: center; background-color: #0A2540; color: white;">
+          <h1 style="font-size: 2em; margin-bottom: 10px;">Eluna Academy</h1>
+          <p style="font-size: 1.2em; margin-bottom: 20px;">Selamat Datang ke Platform Pembelajaran Islam Moden</p>
+          <p style="margin-bottom: 20px;">Kami menawarkan program pembelajaran Islam secara online dan fizikal:</p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 20px;">
+            <li style="margin: 10px 0;"><strong>Try Ngaji</strong> - Kelas Mengaji Al-Quran</li>
+            <li style="margin: 10px 0;"><strong>Try Hafazan</strong> - Kelas Hafazan dan Tasmik</li>
+            <li style="margin: 10px 0;"><strong>Try UPKK</strong> - Tuisyen Ulangkaji Bahasa Arab</li>
+          </ul>
+          <p style="font-size: 0.9em; color: #ccc;">Sila aktifkan JavaScript untuk pengalaman penuh.</p>
+        </div>
+      </noscript>
+      <!-- React app will mount here -->
+    </div>
+    
+    <!-- Main React Application -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

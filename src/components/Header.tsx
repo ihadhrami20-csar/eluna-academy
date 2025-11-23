@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-interface HeaderProps {
-  onSignUpClick: () => void;
-}
+interface HeaderProps {}
 
 const NavLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
   <a href={href} className="text-white hover:text-turquoise transition-colors duration-300">{children}</a>
 );
 
-const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -35,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
         </nav>
         <div className="hidden lg:block">
           <button
-            onClick={onSignUpClick}
+            onClick={() => document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-gradient-button text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
           >
             Daftar Sekarang
@@ -57,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
             <NavLink href="#about">About</NavLink>
             <NavLink href="#contact">Contact</NavLink>
             <button
-              onClick={onSignUpClick}
+              onClick={() => document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-gradient-button text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-4"
             >
               Daftar Sekarang
